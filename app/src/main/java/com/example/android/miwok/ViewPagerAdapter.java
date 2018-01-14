@@ -10,6 +10,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 
+    private String [] pageTitle = {"Numbers", "Family", "Colors", "Phrases"};
+
     public ViewPagerAdapter(FragmentManager fm) {
             super(fm);
     }
@@ -27,5 +29,10 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return 4;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return pageTitle[position];
     }
 }
